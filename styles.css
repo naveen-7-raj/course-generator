@@ -1,0 +1,119 @@
+:root {
+    --accent: #8b5cf6;
+}
+
+body {
+    font-family: system-ui, Arial, sans-serif;
+    background: #000;
+    margin: 0;
+    color: #fff;
+    animation: backgroundAnimation 15s linear infinite;
+}
+
+@keyframes backgroundAnimation {
+    0% { background-color: #000; }
+    25% { background-color: #1a1a2e; }
+    50% { background-color: #2c003e; }
+    75% { background-color: #1a1a2e; }
+    100% { background-color: #000; }
+}
+
+.container {
+    max-width: 780px;
+    margin: 28px auto;
+    background: #111;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 255, 255, 0.2);
+}
+
+h1 {
+    margin: 0 0 6px;
+    text-align: center;
+    color: #9d7aff;
+    animation: textColorChange 5s infinite alternate;
+}
+
+@keyframes textColorChange {
+    0% { color: #9d7aff; }
+    50% { color: #ff7efc; }
+    100% { color: #7affd4; }
+}
+
+.muted {
+    color: #a0a0a0;
+}
+
+.buttons button {
+    margin: 8px 8px 0 0;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 0;
+    background: var(--accent);
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+.buttons button:hover {
+    background: #6d28d9;
+    transform: scale(1.05);
+}
+
+.btn-alt {
+    background: #2a2a40;
+    color: #fff;
+    border-radius: 8px;
+    padding: 8px 12px;
+    border: 0;
+    cursor: pointer;
+}
+
+label {
+    display: block;
+    margin: 8px 0;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: #222;
+    color: #fff;
+    font-size: 1em;
+    animation: inputTextColor 6s infinite alternate;
+}
+
+@keyframes inputTextColor {
+    0% { color: #c084fc; }
+    25% { color: #7effd4; }
+    50% { color: #ff7eff; }
+    75% { color: #a78bfa; }
+    100% { color: #c084fc; }
+}
+
+.row {
+    margin-top: 14px;
+}
+
+.hidden {
+    display: none;
+}
+
+.output {
+    background: #0b1220;
+    color: #d6e7ff;
+    padding: 12px;
+    border-radius: 8px;
+    white-space: pre-wrap;
+    max-height: 420px;
+    overflow: auto;
+    font-family: monospace;
+    animation: outputTextColor 8s infinite alternate;
+}
+
+@keyframes outputTextColor {
+    0% { color: #7effd4; }
+    50% { color: #c084fc; }
+    100% { color: #7effd4; }
+}
